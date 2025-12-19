@@ -20,7 +20,7 @@ function registerKeybindings() {
   game.keybindings.register(MODULE_ID, "raiseHand", {
     name: 'Raise Hand',
     hint: 'Toggle Raise Hand',
-    editable: [{ key: "KeyH", modifiers: []}],
+    editable: [{ key: "KeyH", modifiers: ["Shift"]}],
     onDown: (context) => HandRaiser.raiseHand(),
     reservedModifiers: []
   });
@@ -28,7 +28,7 @@ function registerKeybindings() {
   game.keybindings.register(MODULE_ID, "xCard", {
     name: 'X-Card',
     hint: 'This will display the X-Card.',
-    editable: [{ key: "KeyX", modifiers: []}],
+    editable: [{ key: "KeyX", modifiers: ["Shift"]}],
     onDown: (context) => {
       if (game.settings.get(MODULE_ID, "xcard")) {
         HandRaiser.showXCardDialog();
