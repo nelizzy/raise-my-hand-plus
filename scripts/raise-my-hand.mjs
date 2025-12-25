@@ -140,7 +140,7 @@ function registerKeybindings() {
   game.keybindings.register(MODULE_ID, "raise-hand", {
     name: 'raise-my-hand.controls.raise-hand.name',  
     hint: 'raise-my-hand.controls.raise-hand.hint',
-    editable: [{ key: "KeyH", modifiers: []}],
+    editable: [{ key: "KeyH", modifiers: ["Shift"]}],
     onDown: (context) => {
       const tool = ui.controls.controls["tokens"].tools["raise-hand"];
       if (!tool) return; // this can happen if the control is not registered yet or all modes are disabled
@@ -160,7 +160,7 @@ function registerKeybindings() {
   game.keybindings.register(MODULE_ID, "show-xcard", {
     name: 'raise-my-hand.controls.show-xcard.name',
     hint: 'raise-my-hand.controls.show-xcard.hint',
-    editable: [{ key: "KeyX", modifiers: []}],
+    editable: [{ key: "KeyX", modifiers: ["Shift"]}],
     onDown: (context) => {
       const tool = ui.controls.controls["tokens"].tools["show-xcard"];
       if (!tool) return; // this can happen if the control is not registered yet or all modes are disabled
